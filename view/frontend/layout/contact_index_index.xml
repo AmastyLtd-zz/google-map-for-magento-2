@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main">
+            <block class="Amasty\GoogleMap\Block\Map" name="amasty_google_map_top" before="-" ifconfig="amgooglemap/general/enabled"/>
+            <block class="Amasty\GoogleMap\Block\Map" name="amasty_google_map_bottom" after="-" ifconfig="amgooglemap/general/enabled"/>
+        </referenceContainer>
+    </body>
+</page>

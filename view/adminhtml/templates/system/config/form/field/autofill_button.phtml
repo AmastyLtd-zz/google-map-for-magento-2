@@ -1,0 +1,45 @@
+<?php
+/** @var \Amasty\GoogleMap\Block\Adminhtml\System\Config\Field\AutoFill $block */
+?>
+<input id="amgooglemap_coordinates_autofill" data-ui-id="button-groups-coordinates-fields-autofill-value" value="<?= /* @escapeNotVerified */ __('Request Latitude &amp; Longitude from Google') ?>" class="" type="button">
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $('#amgooglemap_coordinates_autofill').click(function () {
+            var address = $('input.amasty-autofill-address').val();
+            var apiKey = $('input.amasty-autofill-api-key').val();
+
+            $.ajax({
+                url: 'https://maps.googleapis.com/maps/api/geocode/json',
+                type: 'GET',
+                showLoader: true,
+                data: {"address": address, "key": apiKey},
+                success: function (response) {
+                    if (response.error_message) {
+                        alert(response.error_message);
+                        return;
+                    }
+
+                    if (response.results.length < 1) {
+                        alert('<?= __('Result is empty. Address is Invalid.') ?>');
+                        return;
+                    }
+                    $('input.amasty-autofill-latitude').val(response.results[0].geometry.location.lat);
+                    $('input.amasty-autofill-longitude').val(response.results[0].geometry.location.lng);
+
+                    console.log('response.results from Google geocode API:');
+                    console.log(response.results);
+                },
+                error: function (jqXHR, exception) {
+                    if (jqXHR.responseText) {
+                        var response = JSON.parse(jqXHR.responseText);
+                        alert(response.error_message);
+                        return;
+                    }
+                }
+            })
+        });
+    });
+</script>

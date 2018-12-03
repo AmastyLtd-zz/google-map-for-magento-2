@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="amgooglemap" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Google Map</label>
+            <tab>amasty</tab>
+            <resource>Amasty_GoogleMap::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable the Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_key" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google API Key</label>
+                    <frontend_class>amasty-autofill-api-key</frontend_class>
+                    <comment><![CDATA[You can generate the site key <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">here</a>.]]></comment>
+                </field>
+                <field id="draggable" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow Map Dragging</label>
+                    <comment>Set 'No' to prevent a map from being dragged.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="zoom" translate="label comment tooltip" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Zoom</label>
+                    <validate>required-entry validate-number validate-greater-than-zero validate-number-range number-range-0-25</validate>
+                    <comment>The initial resolution at which a map will be displayed.</comment>
+                    <tooltip><![CDATA[You can set the desired zoom level. For example, the most common values with zoom level of Google Map:<br/>
+                        1: World<br/>
+                        5: Landmass/continent<br/>
+                        10: City<br/>
+                        15: Streets<br/>
+                        20: Buildings]]></tooltip>
+                </field>
+                <field id="map_type" translate="label comment tooltip" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Map Type</label>
+                    <comment>Type of Google Map display.</comment>
+                    <source_model>Amasty\GoogleMap\Model\Config\MapType</source_model>
+                    <tooltip><![CDATA[<b>Roadmap</b> - displays the roadmap view.<br/>
+                        <b>Satellite</b> - displays the Google Earth satellite image.<br/>
+                        <b>Hybrid</b> - displays the roadmap and satellite views combined.<br/>
+                        <b>Terrain</b> - displays a physical map based on the terrain information.
+                    ]]></tooltip>
+                </field>
+                <field id="width" translate="label comment tooltip" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Width</label>
+                    <validate>validate-css-length</validate>
+                    <comment>The width of the map block (CSS length).</comment>
+                    <tooltip>You can use the CSS-length values for the block configuration (100px, 77pt, 20em, .5ex or 50%)</tooltip>
+                </field>
+                <field id="height" translate="label comment tooltip" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Height</label>
+                    <validate>validate-css-length</validate>
+                    <comment>The height of the map block (CSS length).</comment>
+                    <tooltip>You can use the CSS-length values for the block configuration (100px, 77pt, 20em, .5ex or 50%)</tooltip>
+                </field>
+                <field id="display_area" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google Map Position</label>
+                    <comment><![CDATA[The position of the Google Map on the 'Contact Us' page.<br/>You can use the Google Map widget to display the map on any page of your store. More details you can find in <a href="https://amasty.com/docs/doku.php?id=magento_2:google_map#google_map_as_a_widget" target="_blank">the user guide</a>.]]></comment>
+                    <source_model>Amasty\GoogleMap\Model\Config\DisplayArea</source_model>
+                </field>
+                <field id="wrap_block" translate="label comment" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Map Block Wrapping</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Set 'No' to disable the map block wrapping with the page content</comment>
+                </field>
+            </group>
+            <group id="coordinates" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Location Marker Coordinates</label>
+                <comment><![CDATA[You can fill in the latitude and longitude manually using <a href="https://support.google.com/maps/answer/18539" target="_blank" title="Find or enter latitude &amp; longitude">this</a> manual.]]></comment>
+                <field id="address" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Marker Address</label>
+                    <frontend_class>amasty-autofill-address</frontend_class>
+                    <comment>Location on a map and the marker's title.</comment>
+                </field>
+                <field id="autofill" translate="label comment tooltip" type="button" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>AutoFill</label>
+                    <frontend_model>Amasty\GoogleMap\Block\Adminhtml\System\Config\Field\AutoFill</frontend_model>
+                    <comment><![CDATA[Automatically fill in the latitude and longitude values based on the <b>'Marker Address'</b> and <b>'Google API Key'</b> fields.]]></comment>
+                    <tooltip>If you get an error, please check the 'Google API Key' field. The 'Marker Address' field must be filled in completely including a country and a region. Also, you can specify the coordinates manually using the 'Latitude' and 'Longitude' fields.</tooltip>
+                </field>
+                <field id="latitude" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Latitude</label>
+                    <validate>required-entry validate-number validate-number-range number-range--85-85</validate>
+                    <frontend_class>required amasty-autofill-latitude</frontend_class>
+                </field>
+                <field id="longitude" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Longitude</label>
+                    <validate>required-entry validate-number validate-number-range number-range--180-180</validate>
+                    <frontend_class>required amasty-autofill-longitude</frontend_class>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

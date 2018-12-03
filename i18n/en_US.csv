@@ -1,0 +1,62 @@
+Top,Top
+Bottom,Bottom
+"Do not display on 'Contact Us', enable as a widget","Do not display on 'Contact Us', enable as a widget"
+Roadmap,Roadmap
+Satellite,Satellite
+Hybrid,Hybrid
+Terrain,Terrain
+"Request Latitude &amp; Longitude from Google","Request Latitude &amp; Longitude from Google"
+"Result is empty. Address is Invalid.","Result is empty. Address is Invalid."
+"Google Map","Google Map"
+"General Settings","General Settings"
+"Enable the Module","Enable the Module"
+"Google API Key","Google API Key"
+"You can generate the site key <a href=""https://developers.google.com/maps/documentation/javascript/get-api-key"" target=""_blank"">here</a>.","You can generate the site key <a href=""https://developers.google.com/maps/documentation/javascript/get-api-key"" target=""_blank"">here</a>."
+"Allow Map Dragging","Allow Map Dragging"
+"Set 'No' to prevent a map from being dragged.","Set 'No' to prevent a map from being dragged."
+Zoom,Zoom
+"The initial resolution at which a map will be displayed.","The initial resolution at which a map will be displayed."
+"You can set the desired zoom level. For example, the most common values with zoom level of Google Map:<br/>
+                        1: World<br/>
+                        5: Landmass/continent<br/>
+                        10: City<br/>
+                        15: Streets<br/>
+                        20: Buildings","You can set the desired zoom level. For example, the most common values with zoom level of Google Map:<br/>
+                        1: World<br/>
+                        5: Landmass/continent<br/>
+                        10: City<br/>
+                        15: Streets<br/>
+                        20: Buildings"
+"Map Type","Map Type"
+"Type of Google Map display.","Type of Google Map display."
+"<b>Roadmap</b> - displays the roadmap view.<br/>
+                        <b>Satellite</b> - displays the Google Earth satellite image.<br/>
+                        <b>Hybrid</b> - displays the roadmap and satellite views combined.<br/>
+                        <b>Terrain</b> - displays a physical map based on the terrain information.
+                    ","<b>Roadmap</b> - displays the roadmap view.<br/>
+                        <b>Satellite</b> - displays the Google Earth satellite image.<br/>
+                        <b>Hybrid</b> - displays the roadmap and satellite views combined.<br/>
+                        <b>Terrain</b> - displays a physical map based on the terrain information.
+                    "
+Width,Width
+"The width of the map block (CSS length).","The width of the map block (CSS length)."
+"You can use the CSS-length values for the block configuration (100px, 77pt, 20em, .5ex or 50%)","You can use the CSS-length values for the block configuration (100px, 77pt, 20em, .5ex or 50%)"
+Height,Height
+"The height of the map block (CSS length).","The height of the map block (CSS length)."
+"Google Map Position","Google Map Position"
+"The position of the Google Map on the 'Contact Us' page.<br/>You can use the Google Map widget to display the map on any page of your store. More details you can find in <a href=""https://amasty.com/docs/doku.php?id=magento_2:google_map#google_map_as_a_widget"" target=""_blank"">the user guide</a>.","The position of the Google Map on the 'Contact Us' page.<br/>You can use the Google Map widget to display the map on any page of your store. More details you can find in <a href=""https://amasty.com/docs/doku.php?id=magento_2:google_map#google_map_as_a_widget"" target=""_blank"">the user guide</a>."
+"Enable Map Block Wrapping","Enable Map Block Wrapping"
+"Set 'No' to disable the map block wrapping with the page content","Set 'No' to disable the map block wrapping with the page content"
+"Location Marker Coordinates","Location Marker Coordinates"
+"You can fill in the latitude and longitude manually using <a href=""https://support.google.com/maps/answer/18539"" target=""_blank"" title=""Find or enter latitude &amp; longitude"">this</a> manual.","You can fill in the latitude and longitude manually using <a href=""https://support.google.com/maps/answer/18539"" target=""_blank"" title=""Find or enter latitude &amp; longitude"">this</a> manual."
+"Marker Address","Marker Address"
+"Location on a map and the marker's title.","Location on a map and the marker's title."
+AutoFill,AutoFill
+"Automatically fill in the latitude and longitude values based on the <b>'Marker Address'</b> and <b>'Google API Key'</b> fields.","Automatically fill in the latitude and longitude values based on the <b>'Marker Address'</b> and <b>'Google API Key'</b> fields."
+"If you get an error, please check the 'Google API Key' field. The 'Marker Address' field must be filled in completely including a country and a region. Also, you can specify the coordinates manually using the 'Latitude' and 'Longitude' fields.","If you get an error, please check the 'Google API Key' field. The 'Marker Address' field must be filled in completely including a country and a region. Also, you can specify the coordinates manually using the 'Latitude' and 'Longitude' fields."
+Latitude,Latitude
+Longitude,Longitude
+"Amasty Google Map","Amasty Google Map"
+"Title for Marker","Title for Marker"
+"Map Width","Map Width"
+"Map Height","Map Height"

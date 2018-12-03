@@ -1,0 +1,34 @@
+<?php /** @var \Amasty\GoogleMap\Block\Map $block */ ?>
+<div class="amgooglemap_mapblock">
+    <div class="amgooglemap-canvas" id="<?= /* @escapeNotVerified */ $block->getMapId() ?>" style="<?= /* @escapeNotVerified */ $block->getStyles() ?>">
+    </div>
+    <div class="clearfix"></div>
+    <div style="<?= /* @escapeNotVerified */ $block->getStyleForAmastyLink() ?>" class="amasty-link">
+        <a href="https://amasty.com/magento-2-extensions.html" target="_blank" title="Magento 2 extensions by Amasty">Magento 2 extensions</a> by Amasty
+    </div>
+    <div class="clearfix"></div>
+</div>
+<script>
+    require([
+        "https://maps.googleapis.com/maps/api/js?<?= /* @escapeNotVerified */ $block->getApiKey() ?>"
+    ], function () {
+        var mapLatLng = new google.maps.LatLng(<?= (float)$block->getLatitude() ?>, <?= (float)$block->getLongitude() ?>);
+        var mapOptions = {
+            draggable: <?= (bool)$block->getIsDraggable() ? 'true' : 'false'; ?>,
+            zoom: <?= (int)$block->getZoom() ?>,
+            center: mapLatLng,
+            mapTypeId: '<?= $block->getMapType() ?>'
+        };
+
+        // draw map
+        var amMap = new google.maps.Map(document.getElementById("<?= /* @escapeNotVerified */ $block->getMapId() ?>"), mapOptions);
+
+        // add Marker to map
+        var marker = new google.maps.Marker({
+            position: mapLatLng,
+            map: amMap,
+            animation: google.maps.Animation.DROP,
+            title: '<?= /* @escapeNotVerified */ $block->getMarkerTitle() ?>'
+        });
+    });
+</script>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="amasty_google_map" class="Amasty\GoogleMap\Block\Map" is_email_compatible="false">
+        <label translate="true">Amasty Google Map</label>
+        <description translate="true">Google Map</description>
+        <parameters>
+            <parameter name="marker_title" xsi:type="text" required="false" visible="true">
+                <label translate="true">Title for Marker</label>
+            </parameter>
+            <parameter name="map_width" xsi:type="text" required="false" visible="true">
+                <label translate="true">Map Width</label>
+            </parameter>
+            <parameter name="map_height" xsi:type="text" required="false" visible="true">
+                <label translate="true">Map Height</label>
+            </parameter>
+            <parameter name="map_type" xsi:type="select" visible="true" source_model="Amasty\GoogleMap\Model\Config\MapType">
+                <label translate="true">Map Type</label>
+            </parameter>
+            <parameter name="zoom" xsi:type="text" required="false" visible="true">
+                <label translate="true">Zoom</label>
+            </parameter>
+            <parameter name="lat" xsi:type="text" required="false" visible="true">
+                <label translate="true">Latitude</label>
+            </parameter>
+            <parameter name="long" xsi:type="text" required="false" visible="true">
+                <label translate="true">Longitude</label>
+            </parameter>
+            <parameter name="draggable" xsi:type="select" required="false" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Allow Map Dragging</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
