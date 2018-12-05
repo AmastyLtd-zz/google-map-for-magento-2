@@ -93,6 +93,10 @@ And there we go!
 * [Magento Landing Pages](https://marketplace.magento.com/amasty-extension-landing-pages.html)
 * [SMTP Email Settings for Magento 1](https://marketplace.magento.com/amasty-extension-smtp-email-settings.html)
 
+* [Magento 2 Wishlist Extension](https://github.com/AmastyLtd/wishlist-for-magento-2)
+* [Magento 2 Facebook Comments](https://github.com/AmastyLtd/facebook-comments-for-magento-2)
+* [Magento 2 Promotions Manager](https://github.com/AmastyLtd/promotions-manager-for-magento-2)
+
 * [Custom Form for Magento 2](https://amasty.com/custom-form-for-magento-2.html?utm_source=github&utm_medium=link&utm_campaign=listings)
 * [FAQ and Product Questions for Magento 1](https://amasty.com/magento-faq-and-product-questions.html?utm_source=github&utm_medium=link&utm_campaign=listings)
 * [FAQ and Product Questions for Magento 2](https://amasty.com/faq-and-product-questions-for-magento-2.html?utm_source=github&utm_medium=link&utm_campaign=listings)
